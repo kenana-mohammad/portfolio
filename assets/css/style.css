@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+body{
+    height: 4000px;
+}
+/**comomon */
+ .icon  {
+  position: relative;
+display: flex;   
+align-items: center;  
+flex-direction: row; 
+color: white;
+width: 60vw;
+margin: 0 auto;
+margin-top: 30px;
+justify-content: center;  
+ }
+ h1.title{
+  text-align: center;
+  text-transform: capitalize!important;
+  width: max-content;
+  text-align: center;
+  letter-spacing: 1px;
+  /* color: white; */
+  margin: 0 auto;
+  margin-top: 70px;
+
+ }
+
+  .icon::before,  .icon::after{
+  position: relative;
+  content: "";
+  height: 2px;
+  text-align: center;
+  width: 100px;
+  background-color: white;
+ }
+/* start nav */
+nav{
+    background-color: #313030;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 120px;
+    color: #ffff;
+    /* flex-wrap: wrap; */
+    gap:30px;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 10px 50px 80px 80px .9 rgba(0.0.0.,.9);
+
+}
+nav  h1.logo{
+    max-width: max-content;
+    flex-shrink: 0;
+
+}
+nav ul{
+display: flex;
+list-style: none;
+gap: 30px;
+
+color: white;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+nav button{
+    display: none;
+    background: none;
+    background-color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 4px;
+    outline: 0;
+}
+h1.title span{
+
+}
+/* end nav */
+
+
+ /**start hero */
+       .hero{
+        /* height: calc(100vh-20px); */
+        height: 100vh;
+        background-color: #ad649d;
+        color: #ffff;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+         justify-content: center;
+        text-align: center;
+       }
+        .hero h1{
+        text-transform: uppercase;
+        width: max-content;
+        text-align: center;
+        letter-spacing: 1px;
+        /* color: white; */
+        margin: 10px auto;
+
+       }
+       .hero .pic{
+        /* width: 100vw; */
+     
+        /* margin: auto; */
+       }
+       .hero .pic img{
+        width: 300px;
+        
+        height: 300px;
+        object-fit: contain;
+       }
+       .hero p{
+         padding-top: 10px;
+       }
+     .hero .icon  {
+      position: relative;
+    display: flex;   
+    align-items: center;  
+    flex-direction: row; 
+   width: 60vw;
+   margin: 0 auto;
+   margin-top: 10px;
+   justify-content: center;  
+     }
+ 
+     .hero .icon::before, .hero .icon::after{
+      position: relative;
+      content: "";
+      height: 2px;
+      text-align: center;
+      width: 100px;
+      background-color: white;
+     }
+     p.job{
+      margin-top: 4px;
+      font-size: 1rem;
+      text-transform: capitalize;
+      line-height: 50px;
+      padding-bottom: 10px;
+      padding: 10px;
+
+     }
+     .hero h1.title{
+      animation: area 2s ease-in-out .1s 1 ;
+
+     }
+     .hero  span{
+      opacity: 0;
+      display: inline-block;
+      animation: job 2s ease-in 3s 1 forwards;
+
+     } 
+     @keyframes area{
+      0%{
+        transform:translate(-1000px,0);
+        
+
+      }
+      100%{
+        transform: translate(50px,0);
+
+      }
+    }
+      @keyframes job{
+        0%{
+          transform:translate(1000px,0);
+          opacity: 1;
+  
+        }
+        100%{
+          transform: translate(30px,0);
+  opacity: 1;
+  background-color: #ad649d;
+  
+        }
+     }
+  /**end hero */
+
+/** */
+#portifolio{
+  margin-top: 100px;
+}
+ .icon  {
+color: black;
+}
+#portifolio .icon::before, #portifolio .icon::after{
+ 
+  background-color: black;
+ }
+ #portifolio .container,#projects .container, #services .container,#contact .container
+ {
+  max-width: 1300px;
+  margin:40px auto;
+  align-items: center;
+  
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+ #portifolio .container .card,#projects .container .card, #services .container .card
+ {
+  width: 300px;
+  margin: 10px auto;
+  /* background-color:#ad649d; */
+  border: 1px solid rgba(0,0,0,.1);
+  outline: 0;
+  padding: 0 20px;
+  box-shadow: 0 .5rem 1rem  2px  rgba(0,0,0,.1);
+  height: 265px;
+  background-color: white;
+  position: relative;
+  transition: all .4 ease-in 1s;
+ }
+ #portifolio  {
+  background-color: rgba(0,0,0,.1);
+  padding: 10px;
+ 
+ }
+ #portifolio .container .card:hover {
+  transform: translateY(10px);
+  transform: scale(1.1);
+  background-color: #313030;
+ }
+ #portifolio .container .card .circle{
+  width: 200px;
+  /* margin:20px auto; */
+  cursor: pointer;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  background-color: #313030;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ } 
+ #portifolio .container .card .circle img{
+  width: 150px;
+  /* margin:20px auto; */
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ } 
+ #portifolio .container .card p{
+  position: absolute;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  bottom: 0;;
+  font-size: 1.3rem;
+  width: 100%;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  text-decoration: dashed;
+  justify-content: center;
+  text-align: center;
+ }
+ /* project */
+ #projects{
+  /* background-color: rgba(0,0,0,.1); */
+  padding: 10px;
+ }
+ #projects .container{
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+  gap: 70px;
+  padding: 0 100px;
+  align-items: center;
+  /* background-color: white; */
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  padding: 30px 10px;
+ }
+ #projects .container .card {
+  width: 250px;
+height: 500px;
+  padding:  0;
+  border: 1px solid rgba(0,0,0,.6);
+  margin: 30px auto;
+  margin-bottom: 20px;
+  transition: all 1s ease-in .3s;
+ }
+ #projects .container .card:hover{
+  cursor: pointer;
+  transform: translateY(-30px);
+ } 
+ #projects .container .card .img {
+  width: 100%;
+  height: 400px;
+  background-color: #ad649d;
+  border-bottom: 1px solid #333;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects .container .card .img img {
+  width: 100%;
+  height: 100%; /* ضبط ارتفاع الصورة */
+}
+ #projects .container .card  .title h3{
+  text-align: center;
+  margin:   auto;
+  padding-top: 10px
+;
+ }
+ #projects .container .card  .link{
+  display: flex;
+  justify-content: space-around;
+padding: 10px 20px;
+  align-items:center ;
+  margin: 10px auto;
+  color: #ffff;
+  background-color: black;
+ }
+ #projects .container .card  .title {
+  background-color: rgb(255, 255, 255);
+ }
+ #projects .container .card  .title a {
+  color: #ffff;
+ }
+   
+ /* about */
+  .icon  {
+  position: relative;
+display: flex;   
+align-items: center;  
+flex-direction: row; 
+width: 60vw;
+margin: 0 auto;
+margin-top: 10px;
+justify-content: center;  
+ }
+
+  .icon::before,  .icon::after{
+  position: relative;
+  content: "";
+  height: 2px;
+  text-align: center;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+ }
+
+ /* services */
+ #services .container {
+  gap: 50px;
+margin-top: 100px;
+ }
+ #services .container .card {
+  position: relative;
+ 
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+ #services .container .card .icon-serv{
+  background-color:rgba(0,0,0,.1);
+  position: absolute;
+  top: -50px;
+  margin:10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+ }
+ #services .container .card .icon-serv svg{
+  font-size: 2rem;
+  font-weight: 600;
+
+  
+ }
+ #services .container .card .descripation{
+  text-align: center;
+ 
+ }
+ #services .container .card .descripation h1{ 
+  color: #333;
+  margin: 10px auto;
+
+ }
+ /* contact */
+ #contact {
+  background-color: rgba(0,0,0,.2);
+  margin-top: 100px;
+  padding: 5px;
+  /* padding: 10px; */
+ }
+ #contact  .container{
+  /* background-color: aliceblue; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+ }
+ #contact .information{
+  width: 300px;
+  padding: 10px;
+ }
+ #contact .icon-info{
+  width: max-content;
+  margin-top: 10px;
+  padding: 20px;
+ }
+ #contact .icon-info span, #contact .icon-info a{
+  padding: 20px;
+ }
+#contact .contact-me{
+  display: flex;
+  width: 300px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: auto;
+}
+#contact form input{
+  width: 100%;
+  border: none;
+  box-shadow: 10x 20px 30px red;
+padding-bottom: 5px;
+  margin: 10px auto;
+  background-color: transparent;
+  border-bottom: 1px solid #333;
+
+}
+textarea{
+  width: 90%;
+  border: none;
+  margin: 10px auto;
+  /* background-color: transparent; */
+
+}
+textarea::placeholder,input::placeholder{
+  padding: 5px 10px;
+  color: #333;
+  text-transform: capitalize;
+}
+input::placeholder{
+  margin-bottom: 2px;
+}
+#contact form button{
+  border: none;
+  background-color: #ad649d;
+  padding: 10px 20px;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 2s ease-out;
+}
+#contact form button:hover{
+  background-color: black;
+  
+}
+ footer{
+  background-color: #333;
+  margin-top: 100px;
+  padding: 20px;
+  color: white;
+  
+ }
+ footer .footer 
+ {
+  width: 70vw;
+  text-align: center;
+  margin: auto;
+ }
+  @media screen and (max-width:992px) {
+    html{
+        font-size: 10px;
+    }
+      nav button {
+        display: block;
+      }
+      nav ul{
+        display: none;
+      }
+      nav
+      {
+        padding: 0 50px;
+      }
+      #contact  .container{
+        margin: auto;
+        justify-content: center;
+      }
+      #contact .information{
+        width: 200px;
+        margin: auto;
+        text-align: center;
+      }
+      /* #contact .information .icon-info{
+        margin: auto;
+        width: 200px;
+        background-color: aqua;
+        text-align: center;
+      } */
+     
+}
